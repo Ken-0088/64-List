@@ -48,10 +48,10 @@ int read_directory(char *filename)
 	// Check for correct image size.  This is a simple check for a
 	// a valid D64 image.  There are better ways to validate.
 	fseek(stream,0L,SEEK_END);
-    int length=ftell(stream);
-    rewind(stream);
-    if(length == 174848) // size is correct, continue
-    {
+    	int length=ftell(stream);
+    	rewind(stream);
+    	if(length == 174848) // size is correct, continue
+    	{
 		// Line zero is hard coded
 		fprintf(stdout, "0 \"");
 
